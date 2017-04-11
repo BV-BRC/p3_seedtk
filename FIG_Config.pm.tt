@@ -1,0 +1,118 @@
+#
+# This a FIG_Config generated from a template in the p3_seedtk adapter module.
+#
+
+
+package FIG_Config;
+
+    ## WHEN YOU ADD ITEMS TO THIS FILE, BE SURE TO UPDATE kernel/scripts/Config.pl.
+    ## All paths should be absolute, not relative.
+
+
+    # root directory of the local web server
+    our $web_dir = "";
+
+    # directory for temporary files
+    our $temp = "[% IF temp_dir %][% temp_dir %][% ELSE %]/tmp[% END %]";
+
+    # URL for the directory of temporary files
+    our $temp_url = "";
+
+    # directory for Alexa workspaces
+    our $alexa = "";
+
+    # TRUE for windows mode
+    our $win_mode = 0;
+
+    # source code project directory
+    our $proj = "[% kb_top %]";
+
+    # location of shared code
+    our $cvsroot = "";
+
+    # TRUE to switch to the data directory during setup
+    our $data_switch = 1;
+
+    # location of global file directory
+    our $global = "[% global_data %]";
+
+    # default conserved domain search URL
+    our $ConservedDomainSearchURL = "[% conserved_domain_search_url %]";
+
+    # Patric Data API URL
+    our $p3_data_api_url = "[% data_api_url %]";
+
+    # perl execution path
+    our $perl_path = "[% kb_runtime %]/bin/perl";
+
+    # code module base directory
+    our $mod_base = '';
+
+    # list of script directories
+    our @scripts = ();
+
+    # list of PERL libraries
+    our @libs = ();
+
+    # list of project modules
+    our @modules = qw();
+
+    # list of shared modules
+    our @shared = qw();
+
+    # list of tool directories
+    our @tools = ();
+
+    # SHRUB CONFIGURATION
+
+
+    # root directory for Shrub data files (should have
+    # subdirectories "Inputs" (optional) and "LoadFiles"
+    # (required))
+    our $data = "";
+
+    # full name of the Shrub DBD XML file
+    our $shrub_dbd = "";
+
+    # Shrub database signon info (name/password)
+    our $userData = "";
+
+    # name of the Shrub database (empty string to use the
+    # default)
+    our $shrubDB = "";
+
+    # TRUE if we should create indexes before a table load
+    # (generally TRUE for MySQL, FALSE for PostGres)
+    our $preIndex = 1;
+
+    # default DBMS (currently only "mysql" works for sure)
+    our $dbms = "mysql";
+
+    # database access port
+    our $dbport = 3306;
+
+    # TRUE if we are using an old version of MySQL (legacy
+    # parameter; may go away)
+    our $mysql_v3 = 0;
+
+    # default MySQL storage engine
+    our $default_mysql_engine = "InnoDB";
+
+    # database host server (empty string to use the default)
+    our $dbhost = "";
+
+    # TRUE to turn off size estimates during table creation--
+    # should be FALSE for MyISAM
+    our $disable_dbkernel_size_estimates = 1;
+
+    # mode for LOAD TABLE INFILE statements, empty string is OK
+    # except in special cases (legacy parameter; may go away)
+    our $load_mode = "";
+
+    # location of the DNA repository
+    our $shrub_dna = "";
+
+    # location of the Sample repository
+    our $shrub_sample = "";
+
+1;
