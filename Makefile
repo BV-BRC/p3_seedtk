@@ -10,11 +10,15 @@ SERVICE_PORT = 3002
 SERVICE_DIR  = $(SERVICE_NAME)
 SERVICE_APP_DIR      = $(TARGET)/services/$(SERVICE_DIR)/app
 
-
 PATH := $(DEPLOY_RUNTIME)/build-tools/bin:$(PATH)
 
 CONFIG          = FIG_Config.pm
 CONFIG_TEMPLATE = $(CONFIG).tt
+
+GLOBAL_DATA = 
+CONSERVED_DOMAIN_SEARCH_URL = http://maple.mcs.anl.gov:5600
+DATA_API_URL = https://www.patricbrc.org/api
+
 
 TPAGE_ARGS = --define kb_runas_user=$(SERVICE_USER) \
 	--define kb_top=$(TARGET) \
@@ -24,7 +28,10 @@ TPAGE_ARGS = --define kb_runas_user=$(SERVICE_USER) \
 	--define kb_service_port=$(SERVICE_PORT) \
 	--define kb_psgi=$(SERVICE_PSGI) \
 	--define kb_app_dir=$(SERVICE_APP_DIR) \
-	--define kb_app_script=$(APP_SCRIPT)
+	--define kb_app_script=$(APP_SCRIPT) \
+	--define global_data=$(GLOBAL_DATA) \
+	--define conserved_domain_search_url=$(CONSERVED_DOMAIN_SEARCH_URL) \
+        --define data_api_url=$(DATA_API_URL) \
 
 default: build-config
 
