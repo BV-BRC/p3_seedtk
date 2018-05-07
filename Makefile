@@ -15,7 +15,7 @@ PATH := $(DEPLOY_RUNTIME)/build-tools/bin:$(PATH)
 CONFIG          = FIG_Config.pm
 CONFIG_TEMPLATE = $(CONFIG).tt
 
-GLOBAL_DATA = 
+GLOBAL_DATA = /disks/patric-common/seedtk/data
 CONSERVED_DOMAIN_SEARCH_URL = http://maple.mcs.anl.gov:5600
 DATA_API_URL = https://www.patricbrc.org/api
 
