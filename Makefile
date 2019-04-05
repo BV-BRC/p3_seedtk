@@ -60,9 +60,11 @@ deploy-scripts:
 deploy-service: 
 
 deploy-config: build-config
+	mkdir -p $(TARGET)/lib
 	$(TPAGE) $(TPAGE_ARGS) $(CONFIG_TEMPLATE) > $(TARGET)/lib/$(CONFIG)
 
 build-config:
+	mkdir -p lib
 	$(TPAGE) $(TPAGE_ARGS) $(CONFIG_TEMPLATE) > lib/$(CONFIG)
 
 build-libs:
