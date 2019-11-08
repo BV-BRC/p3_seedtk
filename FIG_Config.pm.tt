@@ -36,6 +36,9 @@ package FIG_Config;
     # location of global file directory
     our $global = "[% global_data %]";
 
+    # location of eval/binning file directory
+    our $p3data = "[% p3_data %]";
+
     # default conserved domain search URL
     our $ConservedDomainSearchURL = "[% conserved_domain_search_url %]";
 
@@ -70,6 +73,8 @@ package FIG_Config;
     # subdirectories "Inputs" (optional) and "LoadFiles"
     # (required))
     our $data = "";
+
+    our $p3data = "";
 
     # full name of the Shrub DBD XML file
     our $shrub_dbd = "";
