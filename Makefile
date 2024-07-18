@@ -33,8 +33,8 @@ TPAGE_ARGS = --define kb_runas_user=$(SERVICE_USER) \
 	--define global_data=$(GLOBAL_DATA) \
 	--define conserved_domain_search_url=$(CONSERVED_DOMAIN_SEARCH_URL) \
         --define data_api_url=$(DATA_API_URL) \
-        --define p3_data=$(P3_DATA)
-        --define data_api_url=$(DATA_API_URL) \
+        --define p3_data=$(P3_DATA) \
+        --define data_api_url=$(DATA_API_URL)
 
 default: build-config
 
