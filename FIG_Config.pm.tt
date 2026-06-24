@@ -45,6 +45,10 @@ package FIG_Config;
     # Patric Data API URL
     our $p3_data_api_url = "[% data_api_url %]";
 
+    # User-Agent presented to the data API (allowlisted at the Cloudflare edge).
+    # Empty falls back to $ENV{P3_USER_AGENT} then a built-in default in P3DataAPI.
+    our $p3_data_api_user_agent = "[% data_api_user_agent %]";
+
     # perl execution path
     our $perl_path = "[% kb_runtime %]/bin/perl";
 

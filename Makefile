@@ -18,7 +18,8 @@ CONFIG_TEMPLATE = $(CONFIG).tt
 GLOBAL_DATA = /disks/patric-common/seedtk/data
 P3_DATA = /disks/patric-common/seedtk/data
 CONSERVED_DOMAIN_SEARCH_URL = http://maple.mcs.anl.gov:5600
-DATA_API_URL = https://www.patricbrc.org/api
+DATA_API_URL = https://www.bv-brc.org/api
+DATA_API_USER_AGENT = BV-BRC P3 Client
 
 
 TPAGE_ARGS = --define kb_runas_user=$(SERVICE_USER) \
@@ -32,9 +33,9 @@ TPAGE_ARGS = --define kb_runas_user=$(SERVICE_USER) \
 	--define kb_app_script=$(APP_SCRIPT) \
 	--define global_data=$(GLOBAL_DATA) \
 	--define conserved_domain_search_url=$(CONSERVED_DOMAIN_SEARCH_URL) \
-        --define data_api_url=$(DATA_API_URL) \
-        --define p3_data=$(P3_DATA)
-        --define data_api_url=$(DATA_API_URL) \
+	--define data_api_url=$(DATA_API_URL) \
+	--define "data_api_user_agent=$(DATA_API_USER_AGENT)" \
+	--define p3_data=$(P3_DATA) \
 
 default: build-config
 
