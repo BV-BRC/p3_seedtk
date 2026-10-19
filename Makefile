@@ -19,7 +19,20 @@ GLOBAL_DATA = /disks/patric-common/seedtk/data
 P3_DATA = /disks/patric-common/seedtk/data
 CONSERVED_DOMAIN_SEARCH_URL = http://maple.mcs.anl.gov:5600
 DATA_API_URL = https://www.bv-brc.org/api
-DATA_API_USER_AGENT = BV-BRC P3 Client
+#
+# The site-wide default identity, landing in $FIG_Config::p3_data_api_user_agent
+# and used by any client that does not declare a product of its own.
+#
+# It must stay in the bvbrc-* family: the agreement with the Cloudflare
+# administrator is that BV-BRC traffic is identified by a bvbrc-* agent and a
+# rule admits that family. The former value here, "BV-BRC P3 Client", does not
+# match such a rule.
+#
+# This setting outranks P3ClientUA's own built-in default and is written into
+# every deployment, so it -- not the module default -- is what most clients
+# actually send.
+#
+DATA_API_USER_AGENT = bvbrc-client-perl
 
 
 TPAGE_ARGS = --define kb_runas_user=$(SERVICE_USER) \
